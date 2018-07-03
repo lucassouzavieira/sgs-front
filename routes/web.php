@@ -19,6 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post('/lang', function (\Illuminate\Http\Request $request){
+    session(['lang' => $request->get('lang')]);
+    return redirect()->route('home');
+})->name('lang');
+
 Route::group(['prefix' => 'center'], function (){
     $route = 'center';
 

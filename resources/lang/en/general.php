@@ -8,4 +8,5 @@ return [
     'new' => 'Add',
     'name' => 'Name',
     'save' => 'Save',
+    'lang' => 'Portuguese'
 ];
