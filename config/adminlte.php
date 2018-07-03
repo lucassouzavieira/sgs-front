@@ -113,6 +113,10 @@ return [
             'text' => 'Centers',
             'url'  => 'center',
         ],
+        [
+            'text' => 'Buildings',
+            'url'  => 'building',
+        ],
 //        [
 //            'text'        => 'Pages',
 //            'url'         => 'admin/pages',

@@ -34,3 +34,14 @@ Route::group(['prefix' => 'center'], function (){
     Route::post('/update/{id}', 'CenterController@update')->name($route . '.update');
     Route::get('/delete/{id}', 'CenterController@delete')->name($route . '.delete');
 });
+
+Route::group(['prefix' => 'building'], function (){
+    $route = 'building';
+
+    Route::get('/', 'BuildingController@index')->name($route . '.index');
+    Route::get('/create', 'BuildingController@create')->name($route . '.create');
+    Route::post('/create', 'BuildingController@store')->name($route . '.store');
+    Route::get('/update/{id}', 'BuildingController@edit')->name($route . '.edit');
+    Route::post('/update/{id}', 'BuildingController@update')->name($route . '.update');
+    Route::get('/delete/{id}', 'BuildingController@delete')->name($route . '.delete');
+});

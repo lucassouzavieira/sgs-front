@@ -18,13 +18,16 @@ class Lang
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Closure $next
      * @return mixed
      */
     public function handle($request, Closure $next)
     {
-        $this->app->setLocale(Session::get('lang'));
+        if (Session::get('lang')) {
+            $this->app->setLocale(Session::get('lang'));
+        }
+
         return $next($request);
     }
 }
